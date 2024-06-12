@@ -1,0 +1,45 @@
+.reproduction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    color: #2C2D35;
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.reproduction > h1 {
+    font-size: 2.5rem;
+}
+
+.tabs > a {
+    text-decoration: none;
+
+    color: #2C2D35;
+    background-color: #D4E8D9;
+    font-weight: 600;
+
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.tabs > .current_tab {
+    background-color: #598D66;
+    color: #F4F6F5;
+}
+
+@media screen and (max-width: 550px) {
+    .reproduction {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+}

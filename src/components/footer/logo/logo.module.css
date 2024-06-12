@@ -1,0 +1,40 @@
+.logo_content {
+    display: flex;
+    flex-direction: column;
+
+    gap: 35px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color: #598D66;
+}
+
+.logo > h1 {
+    font-size: 1.5rem;
+}
+
+.number {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.number > p {
+    color: #86928B;
+}
+
+@media screen and (max-width: 830px) {
+    .logo_content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        padding-right: 13px;
+    }
+}

@@ -1,0 +1,24 @@
+.catalog_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+
+    gap: 30px;
+}
+
+@media screen and (max-width: 992px) {
+    .catalog_cards {
+        grid-template-columns: repeat(2, 350px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .catalog_cards {
+        grid-template-columns: repeat(1, 350px);
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .catalog_cards {
+        grid-template-columns: repeat(1, 330px);
+    }
+}

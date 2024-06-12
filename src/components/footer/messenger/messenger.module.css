@@ -1,0 +1,29 @@
+.messenger {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+    padding-top: 4px;
+
+    color: #86928B;
+}
+
+.messenger_icons {
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+}
+
+.messenger_icons > img {
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.messenger_icons > img:hover {
+    transform: scale(1.2);
+}
+
+.messenger > p {
+    font-size: .75rem;
+}

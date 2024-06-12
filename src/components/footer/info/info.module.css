@@ -1,0 +1,21 @@
+.info {
+    display: flex;
+    
+    gap: 60px;
+    padding-top: 10px;
+}
+
+.info_column {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.info_column > h1 {
+    font-size: 1.25rem;
+}
+
+.info_column > p {
+    color: #86928B;
+}

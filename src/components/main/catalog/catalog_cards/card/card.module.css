@@ -1,0 +1,63 @@
+.card {
+    width: 100%;
+
+    padding: 20px 20px 30px 20px;
+
+    background-color: #E1EDE6;
+    color: #2C2D35;
+}
+
+.card > img {
+    height: 100%;
+    width: 100%;
+    max-height: 420px;
+    max-width: 310px;
+
+    margin-bottom: 20px;
+
+    user-select: none;
+}
+
+.card_info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+.autor {
+    color: #86928B;
+}
+
+.name {
+    font-size: 1.25rem;
+}
+
+.price {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+
+    color: #598D66;
+}
+
+.card > button {
+    width: 100%;
+    padding: 20px 0;
+
+    background: none;
+    color: #598D66;
+    border: 1px solid #598D66;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.5s;
+}
+
+.card > button:hover {
+    color: #F4F6F5;
+    background-color: #598D66;
+}
