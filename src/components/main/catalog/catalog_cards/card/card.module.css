@@ -3,11 +3,15 @@
 
     padding: 20px 20px 30px 20px;
 
-    background-color: #E1EDE6;
-    color: #2C2D35;
+    background-color: var(--clr2);
+
+    & Button {
+        max-width: none;
+        width: 100%;
+    }
 }
 
-.card > img {
+.picture {
     height: 100%;
     width: 100%;
     max-height: 420px;
@@ -28,7 +32,7 @@
 }
 
 .autor {
-    color: #86928B;
+    color: var(--clr5);
 }
 
 .name {
@@ -39,25 +43,5 @@
     font-size: 1.5rem;
     margin-bottom: 20px;
 
-    color: #598D66;
-}
-
-.card > button {
-    width: 100%;
-    padding: 20px 0;
-
-    background: none;
-    color: #598D66;
-    border: 1px solid #598D66;
-
-    font-weight: 600;
-
-    cursor: pointer;
-
-    transition: all 0.5s;
-}
-
-.card > button:hover {
-    color: #F4F6F5;
-    background-color: #598D66;
+    color: var(--clr3);
 }

@@ -7,3 +7,13 @@
     gap: 70px;
     width: 100%;
 }
+
+.main_text {
+    font-size: 1.5rem;
+    color: var(--clr4);
+}
+
+.description_text {
+    color: var(--clr5);
+}
+

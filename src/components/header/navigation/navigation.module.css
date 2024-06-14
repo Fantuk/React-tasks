@@ -6,26 +6,24 @@
     gap: 60px;
 }
 
-.navigation > a {
+.text {
     text-decoration: none;
-    color: #2C2D35;
-    font-size: 1.5rem;
-    transition: all 0.5s, font-weight 0s;
+    transition: border-bottom 0.5s, transform 0.5s, font-weight 0s;
 }
 
-.navigation > a:hover {
+.text:hover {
     font-weight: 600;
-    border-bottom: 1px solid #2C2D35;
+    border-bottom: 1px solid var(--clr4);
     transform: scale(1.1);
 }   
 
-.navigation > img {
+.shopingCart {
     cursor: pointer;
 
     transition: all 0.5s;
 }
 
-.navigation > img:hover {
+.shopingCart:hover {
     transform: scale(1.2);
 }
 

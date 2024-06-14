@@ -1,21 +1,8 @@
-.logo_content {
+.content {
     display: flex;
     flex-direction: column;
 
     gap: 35px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-
-    gap: 10px;
-
-    color: #598D66;
-}
-
-.logo > h1 {
-    font-size: 1.5rem;
 }
 
 .number {
@@ -25,12 +12,13 @@
     gap: 10px;
 }
 
-.number > p {
-    color: #86928B;
+.text {
+    font-size: 1.25rem;
+    color: var(--clr4);
 }
 
 @media screen and (max-width: 830px) {
-    .logo_content {
+    .content {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;

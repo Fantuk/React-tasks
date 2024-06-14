@@ -3,7 +3,46 @@
     padding: 70px 20px;
 
     background: url('../../images/promo_bg.png');
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat; 
-    background-color: rgba(13, 43, 67, 0.3);
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+
+    gap: 60px;
+    width: 100%;
+    max-width: 540px;
+
+    color: var(--clr1);
+
+    & Button {
+        background-color: var(--clr8);
+        color: var(--clr4);
+        border: none;
+    }
+
+    & Button:hover {
+        background-color: var(--clr8);
+        transform: scale(0.9)
+    }
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.promo_title {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.title_text {
+    font-size: 2.5rem;
 }

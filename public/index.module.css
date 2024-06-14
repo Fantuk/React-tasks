@@ -8,10 +8,20 @@
     font-family: 'Raleway';
 }
 
-body {
-    background-color: #F4F6F5;
+:root {
+    --clr1: #F4F6F5;
+    --clr2: #E1EDE6; 
+    --clr3: #598D66;
+    --clr4: #2C2D35;
+    --clr5: #86928B;
+    --clr6: #D4E8D9;
+    --clr7: #376B44;
+    --clr8: #EEDB6D;
 }
 
+body {
+    background-color: var(--clr1);
+}
 
 @media screen and (max-width: 992px) {
     * {

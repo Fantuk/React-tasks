@@ -12,10 +12,6 @@
     gap: 5px;
 }
 
-.info_column > h1 {
+.title {
     font-size: 1.25rem;
-}
-
-.info_column > p {
-    color: #86928B;
 }

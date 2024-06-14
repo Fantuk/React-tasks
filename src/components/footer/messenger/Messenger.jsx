@@ -9,13 +9,13 @@ import Youtube from '../../images/youtube_icon.svg'
 function Messenger() {
   return (
     <div className={styles.messenger}>
-        <div className={styles.messenger_icons}>
-            <img src={Facebook} alt="netu" />
-            <img src={Instagram} alt="netu" />
-            <img src={Youtube} alt="netu" />
+        <div className={styles.icons}>
+            <img className={styles.icon} src={Facebook} alt="Facebook" />
+            <img className={styles.icon} src={Instagram} alt="Instagram" />
+            <img className={styles.icon} src={Youtube} alt="Youtube" />
         </div>
-        <p>Ink. House ®</p>
-        <p>All rights reserved</p>
+        <p className={styles.text}>Ink. House ®</p>
+        <p className={styles.text}>All rights reserved</p>
     </div>
   )
 }
