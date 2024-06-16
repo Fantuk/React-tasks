@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Button from '../../../Button'
+import Button from '../../Button'
 
 import styles from './card.module.css'
 
@@ -13,7 +13,7 @@ function Card(props) {
             <h1 className={styles.name}>{props.name}</h1>
             <p>{props.material}</p>
         </div>
-        <p className={styles.price}>{props.price}</p>
+        <p className={styles.price}>{props.price} руб</p>
         <Button value="В корзину"/>
     </div>
   )

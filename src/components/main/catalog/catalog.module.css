@@ -38,6 +38,8 @@
 
     padding: 10px 20px;
     border-radius: 20px;
+
+    user-select: none;
 }
 
 .active {
@@ -45,10 +47,35 @@
     color: var(--clr1);
 }
 
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+
+    gap: 30px;
+}
+
+@media screen and (max-width: 992px) {
+    .cards {
+        grid-template-columns: repeat(2, 350px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cards {
+        grid-template-columns: repeat(1, 350px);
+    }
+}
+
 @media screen and (max-width: 550px) {
     .reproduction {
         flex-direction: column;
 
         gap: 20px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .cards {
+        grid-template-columns: repeat(1, 330px);
     }
 }
