@@ -1,0 +1,31 @@
+.main {
+    padding: 10px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.inner {
+  width: 200px;
+  display: grid;
+  grid-template-rows: 0fr;
+
+  transition: grid-template-rows 0.5s;
+}
+
+.inner.open {
+  grid-template-rows: 1fr;
+}
+
+.elements {
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}

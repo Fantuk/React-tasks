@@ -1,15 +1,21 @@
-import React from 'react'
+import React from "react";
 
-import './modalWindow.css'
+import "./modalWindow.css";
 
-function ModalWindow({active, setActive, children}) {
+function ModalWindow({ active, setActive, children }) {
   return (
-    <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
-        <div className={active ? "content active" : "content"} onClick={(ev) => ev.stopPropagation()}>
-            {children}
-        </div>
+    <div
+      className={active ? "modal active" : "modal"}
+      onClick={() => setActive(false)}
+    >
+      <div
+        className={active ? "content active" : "content"}
+        onClick={(ev) => ev.stopPropagation()}
+      >
+        {children}
+      </div>
     </div>
-  )
+  );
 }
 
-export default ModalWindow
+export default ModalWindow;
