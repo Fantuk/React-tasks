@@ -6,19 +6,22 @@ import styles from './card.module.css'
 
 function Card({card}) {
 
-    const [data, setCardData] = useState({"rating": {}})
+    const [data, setCardData] = useState({rating: {}})
     
     useEffect(() => {
         const apiUrl =`https://fakestoreapi.com/products/${card}`
         axios.get(apiUrl).then((resp) => {
             const cardData = resp.data;
             setCardData(cardData);
-          });
+          })
+        return () => {
+          setCardData({title: 'Loading', rating: {}})
+        }
     }, [card])
 
   return (
     <div key={data.id} className={styles.card}>
-        <img src={data.image} alt="product-image"  className={styles.image}/>
+        <img src={data.image} alt="product"  className={styles.image}/>
         <div className={styles.description}>
             <h3>{data.title}</h3>
             <p>Category: {data.category}</p>

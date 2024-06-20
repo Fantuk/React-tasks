@@ -8,12 +8,20 @@ function App() {
   useEffect(() => {
     document.title = `Card №${card}`
   })
+
+  const nextPage = () => {
+    return card < 20 ? setCard(card + 1) : ''
+  } 
+
+  const previousPage = () => {
+    return card > 1 ? setCard(card - 1) : ''
+  } 
   return (
     <main>
       <Card card={card}/>
       <p>{card}/20</p>
-      <button onClick={() => setCard(card - 1)}>Previous</button>
-      <button onClick={() => setCard(card + 1)}>Next</button>
+      <button onClick={() => previousPage()}>Previous</button>
+      <button onClick={() => nextPage()}>Next</button>
     </main>
   );
 }
