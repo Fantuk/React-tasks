@@ -1,27 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-import Card from "./components/product-card/card";
+import CardSwitcher from "./components/card-switcher/cardSwitcher";
+import CardCatalog from "./components/card-catalog/cardCatalog";
+import useResize from "./components/useResize";
 
 function App() {
-  const [card, setCard] = useState(1);
+  const { width } = useResize();
 
-  useEffect(() => {
-    document.title = `Card №${card}`
-  })
+  if (width < 768) return <CardSwitcher />;
 
-  const nextPage = () => {
-    return card < 20 ? setCard(card + 1) : ''
-  } 
-
-  const previousPage = () => {
-    return card > 1 ? setCard(card - 1) : ''
-  } 
   return (
     <main>
-      <Card card={card}/>
-      <p>{card}/20</p>
-      <button onClick={() => previousPage()}>Previous</button>
-      <button onClick={() => nextPage()}>Next</button>
+      <CardCatalog />
     </main>
   );
 }

@@ -1,0 +1,41 @@
+.card {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 700px;
+  height: 500px;
+
+  background-color: #f1f1f1;
+  border-radius: 15px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  transition: box-shadow 0.5s, transform 0.5s;
+}
+
+.sceleton {
+  width: 700px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.image {
+  width: 250px;
+  height: 250px;
+}
+
+.rating {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
