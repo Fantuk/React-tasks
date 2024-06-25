@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 
 import axios from "axios";
+import Card from "../card/card";
 
-import styles from "./card.module.css";
+import styles from '../card/card.module.css'
 
 function CardSwitcher() {
   const [data, setCardData] = useState(undefined);
@@ -32,20 +33,16 @@ function CardSwitcher() {
 
   return (
     <>
-      <div key={data.id} className={styles.card}>
-        <img src={data.image} alt="product" className={styles.image} />
-        <div className={styles.description}>
-          <h3>{data.title}</h3>
-          <p>Category: {data.category}</p>
-          <p>{data.description}</p>
-          <p>${data.price}</p>
-          <div className={styles.rating}>
-            <p>Rating: {data.rating.rate} stars</p>
-            <p>{data.rating.count} feedbacks</p>
-          </div>
-          <button>Купить</button>
-        </div>
-      </div>
+      <Card
+          id={data.id}
+          image={data.image}
+          title={data.title}
+          category={data.category}
+          description={data.description}
+          price={data.price}
+          rate={data.rating.rate}
+          count={data.rating.count}
+        />
       <p>{card}/20</p>
       <button onClick={() => previousPage()}>Previous</button>
       <button onClick={() => nextPage()}>Next</button>

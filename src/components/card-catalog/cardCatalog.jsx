@@ -1,43 +1,44 @@
 import React, { useState, useEffect } from "react";
 
 import axios from "axios";
+import Card from "../card/card";
+import CardSwitcher from "../card-switcher/cardSwitcher"
+import useResize from "../hooks/useResize"
 
-import styles from "../card-switcher/card.module.css";
+import styles from "../card/card.module.css";
 
 function CardCatalog() {
   const [data, setData] = useState([]);
+  const { width } = useResize();
 
   useEffect(() => {
     const apiUrl = `https://fakestoreapi.com/products`;
     axios.get(apiUrl).then((resp) => {
       const cardData = resp.data;
       setData(cardData);
+      document.title = "Catalog"
     });
 
-    return () => {
-      setData([]);
-    };
+
   }, []);
 
   if (!data) return <div className={styles.sceleton}>DATA LOADING</div>;
 
+  if (width < 768) return <CardSwitcher />;
+
   return (
     <>
       {data.map((card) => (
-        <div key={card.id} className={styles.card}>
-          <img src={card.image} alt="product" className={styles.image} />
-          <div className={styles.description}>
-            <h3>{card.title}</h3>
-            <p>Category: {card.category}</p>
-            <p>{card.description}</p>
-            <p>${card.price}</p>
-            <div className={styles.rating}>
-              <p>Rating: {card.rating.rate} stars</p>
-              <p>{card.rating.count} feedbacks</p>
-            </div>
-            <button>Купить</button>
-          </div>
-        </div>
+        <Card
+        id={card.id}
+        image={card.image}
+        title={card.title}
+        category={card.category}
+        description={card.description}
+        price={card.price}
+        rate={card.rating.rate}
+        count={card.rating.count}
+      />
       ))}
     </>
   );
